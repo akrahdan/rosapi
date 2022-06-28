@@ -71,3 +71,7 @@ export default {
 
   CONSTANTS,
 };
+
+export  {
+  CONSTANTS
+};

@@ -4,10 +4,12 @@ import {
   MESSAGE_TYPE_TOOL_NAV_GOAL,
   MESSAGE_TYPE_TOOL_POINT,
   MESSAGE_TYPE_TOOL_POSE_ESTIMATE,
+  MESSAGE_TYPE_TOOL_TELEOPT,
   TOOL_TYPE_CONTROLS,
   TOOL_TYPE_NAV_GOAL,
   TOOL_TYPE_POINT,
   TOOL_TYPE_POSE_ESTIMATE,
+  TOOL_TYPE_TELEOPT
 } from './common';
 
 const activeStyle = {
@@ -24,6 +26,7 @@ export const TOOL_TYPE = {
   [TOOL_TYPE_POINT]: TOOL_TYPE_POINT,
   [TOOL_TYPE_NAV_GOAL]: TOOL_TYPE_NAV_GOAL,
   [TOOL_TYPE_POSE_ESTIMATE]: TOOL_TYPE_POSE_ESTIMATE,
+  [TOOL_TYPE_TELEOPT]: TOOL_TYPE_TELEOPT
 };
 
 export const toolOptions = [
@@ -99,5 +102,21 @@ export const toolOptions = [
       </svg>
     ),
     messageType: MESSAGE_TYPE_TOOL_POINT,
+  },
+
+  {
+    name: 'TeleOpt',
+    type: TOOL_TYPE_TELEOPT,
+    icon: active => (
+      <svg viewBox="0 0 20 20" style={{ height: '20px', marginRight: '2px' }}>
+        <g>
+          <path
+            d="M10,17.47c2.16-2.41,5.85-6.8,5.85-9.34A5.83,5.83,0,0,0,10,2.28h0A5.83,5.83,0,0,0,4.15,8.1v0C4.15,10.67,7.84,15.06,10,17.47ZM10,5.52a2.63,2.63,0,0,1,2.67,2.59v0A2.69,2.69,0,0,1,10,10.8,2.65,2.65,0,0,1,7.39,8.14h0A2.59,2.59,0,0,1,9.94,5.52Z"
+            style={active ? activeStyle : inactiveStyle}
+          />
+        </g>
+      </svg>
+    ),
+    messageType: MESSAGE_TYPE_TOOL_TELEOPT,
   },
 ];

@@ -20,11 +20,11 @@ class Viewport extends React.PureComponent {
     super(props);
     this.container = React.createRef();
 
-    this.updateViewerOptions = this.updateViewerOptions.bind(this);
+    // this.updateViewerOptions = this.updateViewerOptions.bind(this);
   }
 
   componentDidUpdate() {
-    this.updateViewerOptions();
+    // this.updateViewerOptions();
   }
 
   updateViewerOptions() {
@@ -55,7 +55,7 @@ class Viewport extends React.PureComponent {
     const { viewer } = this.props;
     const container = this.container.current;
     viewer.setContainer(container);
-    this.updateViewerOptions();
+    // this.updateViewerOptions();
     viewer.scene.stats.dom.id = 'viewportStats';
     container.appendChild(viewer.scene.stats.dom);
   }
